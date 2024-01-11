@@ -16,9 +16,7 @@ pipeline {
             steps {
                 echo(message: 'Build')
             }
-        } post{
-            always {echo(message: 'Build running')}
-        }
+        } 
         stage('Test') {
             steps {
                 echo(message: 'testing')
