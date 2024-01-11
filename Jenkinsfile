@@ -27,5 +27,16 @@ pipeline {
                 echo(message: 'Integrating')
             }
         }
-    } 
+    } post {
+        failure {
+            echo(env.BUILD_ID)
+        }
+        success {
+            echo(env.JENKINS_URL)
+        }
+        always {
+            echo(message: 'I run always')
+        }
+        
+    }
 }
