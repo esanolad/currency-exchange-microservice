@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh(label: 'mvn --version')
+                sh 'mvn --version'
                 echo(message: 'Build')
             }
         } 
