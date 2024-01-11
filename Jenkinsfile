@@ -17,15 +17,15 @@ pipeline {
                 echo(message: 'Build')
             }
         } 
-        // stage('Test') {
-        //     steps {
-        //         echo(message: 'testing')
-        //     }
-        // }
-        // stage('Integrate') {
-        //     steps {
-        //         echo(message: 'Integrating')
-        //     }
-        // }
+        stage('Test') {
+            steps {
+                echo(message: 'testing')
+            }
+        }
+        stage('Integrate') {
+            steps {
+                echo(message: 'Integrating')
+            }
+        }
     } 
 }
