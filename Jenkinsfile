@@ -10,10 +10,10 @@
 // 	}
 // }
 pipeline {
-    agent{
-        node
-    }
-    stage('Build'){
-        echo('Build')
+    agent any
+    stages{
+        stage('Build'){
+            echo(message: 'build')
+        }
     }
 }
