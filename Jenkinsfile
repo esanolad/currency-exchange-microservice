@@ -27,7 +27,7 @@ pipeline {
                 echo(message: 'Integrating')
             }
         }
-    } post {
+        post {
         failure {
             echo(env.BUILD_ID)
         }
@@ -39,4 +39,5 @@ pipeline {
         }
         
     }
+    } 
 }
