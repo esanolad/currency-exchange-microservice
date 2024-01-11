@@ -10,10 +10,14 @@
 // 	}
 // }
 pipeline {
-    agent any
+    // agent any
+    agent{
+        docker {image 'maven:latest'}
+    }
     stages {
         stage('Build') {
             steps {
+                sh(label: 'mvn --version')
                 echo(message: 'Build')
             }
         } 
